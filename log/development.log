@@ -275,3 +275,408 @@ Processing by Devise::RegistrationsController#new as HTML
 Completed 200 OK in 37ms (Views: 16.3ms | ActiveRecord: 3.3ms | Allocations: 21688)
 
 
+Started GET "/" for 127.0.0.1 at 2020-03-23 15:49:41 -0500
+Processing by HomeController#index as HTML
+Completed 401 Unauthorized in 2ms (ActiveRecord: 0.0ms | Allocations: 942)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2020-03-23 15:49:41 -0500
+Processing by Devise::SessionsController#new as HTML
+  Rendering /home/mmoroney/.rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/devise-4.7.1/app/views/devise/sessions/new.html.erb within layouts/application
+  Rendered /home/mmoroney/.rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/devise-4.7.1/app/views/devise/shared/_links.html.erb (Duration: 0.9ms | Allocations: 582)
+  Rendered /home/mmoroney/.rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/devise-4.7.1/app/views/devise/sessions/new.html.erb within layouts/application (Duration: 4.3ms | Allocations: 2262)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 27ms (Views: 10.2ms | ActiveRecord: 3.3ms | Allocations: 15854)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2020-03-23 15:49:43 -0500
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering /home/mmoroney/.rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/devise-4.7.1/app/views/devise/registrations/new.html.erb within layouts/application
+  Rendered /home/mmoroney/.rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/devise-4.7.1/app/views/devise/shared/_error_messages.html.erb (Duration: 0.5ms | Allocations: 189)
+  Rendered /home/mmoroney/.rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/devise-4.7.1/app/views/devise/shared/_links.html.erb (Duration: 0.2ms | Allocations: 90)
+  Rendered /home/mmoroney/.rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/devise-4.7.1/app/views/devise/registrations/new.html.erb within layouts/application (Duration: 4.0ms | Allocations: 1772)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 12ms (Views: 10.9ms | ActiveRecord: 0.0ms | Allocations: 6083)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2020-03-23 15:49:45 -0500
+Processing by Devise::SessionsController#new as HTML
+  Rendering /home/mmoroney/.rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/devise-4.7.1/app/views/devise/sessions/new.html.erb within layouts/application
+  Rendered /home/mmoroney/.rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/devise-4.7.1/app/views/devise/shared/_links.html.erb (Duration: 0.3ms | Allocations: 131)
+  Rendered /home/mmoroney/.rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/devise-4.7.1/app/views/devise/sessions/new.html.erb within layouts/application (Duration: 3.1ms | Allocations: 1034)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 13ms (Views: 12.2ms | ActiveRecord: 0.0ms | Allocations: 4575)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2020-03-23 15:49:49 -0500
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"0KCaM3ypC+o/275BaCPCqr6IcyTOB7K1FmdgIjU8iWuKOQOESYBZA1zLXBd5txcxOFosj5RRV6+JdAmV15Q/1g==", "user"=>{"email"=>"test@test.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "test@test.com"], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 277ms (ActiveRecord: 1.3ms | Allocations: 95601)
+
+
+  
+NameError (undefined local variable or method `app_dashboard_index_path' for #<Devise::SessionsController:0x00005605bd2c46d8>):
+  
+app/controllers/application_controller.rb:7:in `after_sign_in_path_for'
+Started POST "/users/sign_in" for 127.0.0.1 at 2020-03-23 15:50:51 -0500
+Processing by Users::SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"0KCaM3ypC+o/275BaCPCqr6IcyTOB7K1FmdgIjU8iWuKOQOESYBZA1zLXBd5txcxOFosj5RRV6+JdAmV15Q/1g==", "user"=>{"email"=>"test@test.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "test@test.com"], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 154ms (ActiveRecord: 4.0ms | Allocations: 12756)
+
+
+Started GET "/" for 127.0.0.1 at 2020-03-23 15:50:51 -0500
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 183.1ms | Allocations: 137558)
+Completed 500 Internal Server Error in 188ms (ActiveRecord: 0.3ms | Allocations: 140248)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `app_dashboard_index_path' for #<#<Class:0x00007fc3a430c8d8>:0x00007fc3a430b000>):
+    3: <% if current_user.nil? %>
+    4: 	<%= link_to new_user_session_path, class: 'login-button' do %>Sign in<% end %>
+    5: <% else %>
+    6: 	<%= link_to app_dashboard_index_path, class: 'login-button' do %>Go to App<% end %>
+    7: 	<%= link_to destroy_user_session_path, method: :delete do %>Log out<% end %>
+    8: <% end %>
+  
+app/views/home/index.html.erb:6
+app/controllers/home_controller.rb:3:in `index'
+Started GET "/" for 127.0.0.1 at 2020-03-23 15:50:54 -0500
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 243.8ms | Allocations: 137314)
+Completed 500 Internal Server Error in 249ms (ActiveRecord: 0.5ms | Allocations: 139149)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `app_dashboard_index_path' for #<#<Class:0x00007fc3a430c8d8>:0x00005605baec02a0>):
+    3: <% if current_user.nil? %>
+    4: 	<%= link_to new_user_session_path, class: 'login-button' do %>Sign in<% end %>
+    5: <% else %>
+    6: 	<%= link_to app_dashboard_index_path, class: 'login-button' do %>Go to App<% end %>
+    7: 	<%= link_to destroy_user_session_path, method: :delete do %>Log out<% end %>
+    8: <% end %>
+  
+app/views/home/index.html.erb:6
+app/controllers/home_controller.rb:3:in `index'
+Started GET "/" for 127.0.0.1 at 2020-03-23 15:51:19 -0500
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 224.5ms | Allocations: 137330)
+Completed 500 Internal Server Error in 256ms (ActiveRecord: 3.9ms | Allocations: 148156)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `app_dashboard_index_path' for #<#<Class:0x00007fc3a430d9b8>:0x00007fc3a430aba0>):
+    3: <% if current_user.nil? %>
+    4: 	<%= link_to new_user_session_path, class: 'login-button' do %>Sign in<% end %>
+    5: <% else %>
+    6: 	<%= link_to app_dashboard_index_path, class: 'login-button' do %>Go to App<% end %>
+    7: 	<%= link_to destroy_user_session_path, method: :delete do %>Log out<% end %>
+    8: <% end %>
+  
+app/views/home/index.html.erb:6
+app/controllers/home_controller.rb:3:in `index'
+Started GET "/" for 127.0.0.1 at 2020-03-23 15:51:57 -0500
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.3ms | Allocations: 73)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 13ms (Views: 9.3ms | ActiveRecord: 0.6ms | Allocations: 5964)
+
+
+Started GET "/" for 127.0.0.1 at 2020-03-23 15:52:02 -0500
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 4)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 13ms (Views: 7.6ms | ActiveRecord: 0.4ms | Allocations: 4678)
+
+
+Started GET "/" for 127.0.0.1 at 2020-03-23 15:52:12 -0500
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 1.9ms | Allocations: 250)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 23ms (Views: 16.3ms | ActiveRecord: 0.8ms | Allocations: 6088)
+
+
+Started DELETE "/users/sign_out" for 127.0.0.1 at 2020-03-23 15:52:15 -0500
+Processing by Users::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"mqdS3lGK9zKhZG1rtUSXdr34pct9tWImBwzXALsd5ejnxPtq1wsA0H9nSYN5OQBTUjbLhOWGtYvAr6zJBwHPcA=="}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 8ms (ActiveRecord: 0.3ms | Allocations: 2871)
+
+
+Started GET "/" for 127.0.0.1 at 2020-03-23 15:52:15 -0500
+Processing by HomeController#index as HTML
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms | Allocations: 301)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2020-03-23 15:52:15 -0500
+Processing by Users::SessionsController#new as HTML
+  Rendering users/sessions/new.html.erb within layouts/application
+  Rendered users/shared/_links.html.erb (Duration: 1.1ms | Allocations: 527)
+  Rendered users/sessions/new.html.erb within layouts/application (Duration: 3.5ms | Allocations: 1866)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 11ms (Views: 10.2ms | ActiveRecord: 0.0ms | Allocations: 6883)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2020-03-23 15:52:22 -0500
+Processing by Users::SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"eoATNzJtKjn29xkHwE+sgAbPOGIFa/AjMTQw8DWRiVV15ewjYMhnFMhVia17BxX+yEnY8DKc3i+geV+B5sgt1w==", "user"=>{"email"=>"test@test.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "test@test.com"], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 139ms (ActiveRecord: 0.5ms | Allocations: 4089)
+
+
+Started GET "/" for 127.0.0.1 at 2020-03-23 15:52:22 -0500
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.2ms | Allocations: 73)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 7ms (Views: 4.5ms | ActiveRecord: 0.2ms | Allocations: 4786)
+
+
+Started DELETE "/users/sign_out" for 127.0.0.1 at 2020-03-23 15:52:25 -0500
+Processing by Users::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"qZpoeUKXeBta18advDjVKQlyIs6pQbh7YLvIse45npBht7QTsRUu/9Ky1Rj2kVMMzVNs4LjkjXdufaO85eRDzA=="}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 8ms (ActiveRecord: 0.4ms | Allocations: 2097)
+
+
+Started GET "/" for 127.0.0.1 at 2020-03-23 15:52:25 -0500
+Processing by HomeController#index as HTML
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms | Allocations: 300)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2020-03-23 15:52:25 -0500
+Processing by Users::SessionsController#new as HTML
+  Rendering users/sessions/new.html.erb within layouts/application
+  Rendered users/shared/_links.html.erb (Duration: 0.2ms | Allocations: 131)
+  Rendered users/sessions/new.html.erb within layouts/application (Duration: 5.3ms | Allocations: 1034)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 12ms (Views: 10.3ms | ActiveRecord: 0.0ms | Allocations: 4656)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2020-03-23 15:52:35 -0500
+Processing by Users::RegistrationsController#new as HTML
+  Rendering users/registrations/new.html.erb within layouts/application
+  Rendered /home/mmoroney/.rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/devise-4.7.1/app/views/devise/shared/_error_messages.html.erb (Duration: 0.7ms | Allocations: 189)
+  Rendered users/shared/_links.html.erb (Duration: 1.2ms | Allocations: 471)
+  Rendered users/registrations/new.html.erb within layouts/application (Duration: 5.9ms | Allocations: 2298)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 19ms (Views: 17.6ms | ActiveRecord: 0.0ms | Allocations: 7755)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2020-03-23 15:52:45 -0500
+Processing by Users::RegistrationsController#new as HTML
+  Rendering users/registrations/new.html.erb within layouts/application
+  Rendered /home/mmoroney/.rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/devise-4.7.1/app/views/devise/shared/_error_messages.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered users/shared/_links.html.erb (Duration: 0.4ms | Allocations: 80)
+  Rendered users/registrations/new.html.erb within layouts/application (Duration: 6.2ms | Allocations: 1037)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 18ms (Views: 15.8ms | ActiveRecord: 0.0ms | Allocations: 4564)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2020-03-23 15:55:14 -0500
+Processing by Users::RegistrationsController#new as HTML
+  Rendering users/registrations/new.html.erb within layouts/application
+  Rendered /home/mmoroney/.rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/devise-4.7.1/app/views/devise/shared/_error_messages.html.erb (Duration: 0.7ms | Allocations: 189)
+  Rendered users/shared/_links.html.erb (Duration: 0.7ms | Allocations: 472)
+  Rendered users/registrations/new.html.erb within layouts/application (Duration: 5.0ms | Allocations: 2620)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 27ms (Views: 11.5ms | ActiveRecord: 2.8ms | Allocations: 16216)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2020-03-23 15:55:28 -0500
+Processing by Users::RegistrationsController#new as HTML
+  Rendering users/registrations/new.html.erb within layouts/application
+  Rendered /home/mmoroney/.rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/devise-4.7.1/app/views/devise/shared/_error_messages.html.erb (Duration: 0.6ms | Allocations: 189)
+  Rendered users/registrations/new.html.erb within layouts/application (Duration: 219.5ms | Allocations: 159528)
+Completed 500 Internal Server Error in 224ms (ActiveRecord: 0.0ms | Allocations: 161694)
+
+
+  
+ActionView::Template::Error (undefined method `string' for #<ActionView::Helpers::FormBuilder:0x00005605bb75d228>):
+    23: 
+    24:   <div class="field">
+    25:     <%= f.label :first_name_confirmation %><br />
+    26:     <%= f.string :password_confirmation, autocomplete: "new-password" %>
+    27:   </div>
+    28: 
+    29:   <div class="actions">
+  
+app/views/users/registrations/new.html.erb:26
+app/views/users/registrations/new.html.erb:3
+Started GET "/users/sign_up" for 127.0.0.1 at 2020-03-23 15:56:14 -0500
+Processing by Users::RegistrationsController#new as HTML
+  Rendering users/registrations/new.html.erb within layouts/application
+  Rendered /home/mmoroney/.rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/devise-4.7.1/app/views/devise/shared/_error_messages.html.erb (Duration: 0.7ms | Allocations: 189)
+  Rendered users/shared/_links.html.erb (Duration: 1.1ms | Allocations: 462)
+  Rendered users/registrations/new.html.erb within layouts/application (Duration: 6.4ms | Allocations: 2620)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 16ms (Views: 15.1ms | ActiveRecord: 0.0ms | Allocations: 8020)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2020-03-23 15:56:27 -0500
+Processing by Users::RegistrationsController#new as HTML
+  Rendering users/registrations/new.html.erb within layouts/application
+  Rendered /home/mmoroney/.rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/devise-4.7.1/app/views/devise/shared/_error_messages.html.erb (Duration: 0.8ms | Allocations: 189)
+  Rendered users/shared/_links.html.erb (Duration: 1.0ms | Allocations: 462)
+  Rendered users/registrations/new.html.erb within layouts/application (Duration: 6.9ms | Allocations: 2548)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 19ms (Views: 17.9ms | ActiveRecord: 0.0ms | Allocations: 7926)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2020-03-23 15:57:17 -0500
+Processing by Users::RegistrationsController#new as HTML
+  Rendering users/registrations/new.html.erb within layouts/application
+  Rendered /home/mmoroney/.rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/devise-4.7.1/app/views/devise/shared/_error_messages.html.erb (Duration: 1.2ms | Allocations: 189)
+  Rendered users/registrations/new.html.erb within layouts/application (Duration: 14.5ms | Allocations: 5699)
+Completed 500 Internal Server Error in 20ms (ActiveRecord: 0.0ms | Allocations: 7879)
+
+
+  
+ActionView::Template::Error (undefined method `first_name' for #<User:0x00007fc3a478dad8>):
+    23: 
+    24:   <div class="field">
+    25:     <%= f.label :first_name%><br />
+    26:     <%= f.text_field :first_name %>
+    27:   </div>
+    28: 
+    29:   <div class="field">
+  
+app/views/users/registrations/new.html.erb:26
+app/views/users/registrations/new.html.erb:3
+Started GET "/users/sign_up" for 127.0.0.1 at 2020-03-23 15:57:32 -0500
+Processing by Users::RegistrationsController#new as HTML
+  Rendering users/registrations/new.html.erb within layouts/application
+  Rendered /home/mmoroney/.rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/devise-4.7.1/app/views/devise/shared/_error_messages.html.erb (Duration: 0.9ms | Allocations: 189)
+  Rendered users/registrations/new.html.erb within layouts/application (Duration: 6.8ms | Allocations: 2648)
+Completed 500 Internal Server Error in 15ms (ActiveRecord: 0.0ms | Allocations: 4827)
+
+
+  
+ActionView::Template::Error (wrong number of arguments (given 0, expected 1..2)):
+    23: 
+    24:   <div class="field">
+    25:     <%= f.label :first_name%><br />
+    26:     <%= f.text_field %>
+    27:   </div>
+    28: 
+    29:   <div class="field">
+  
+app/views/users/registrations/new.html.erb:26
+app/views/users/registrations/new.html.erb:3
+Started GET "/users/sign_up" for 127.0.0.1 at 2020-03-23 15:57:45 -0500
+Processing by Users::RegistrationsController#new as HTML
+  Rendering users/registrations/new.html.erb within layouts/application
+  Rendered /home/mmoroney/.rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/devise-4.7.1/app/views/devise/shared/_error_messages.html.erb (Duration: 0.6ms | Allocations: 189)
+  Rendered users/registrations/new.html.erb within layouts/application (Duration: 13.5ms | Allocations: 5694)
+Completed 500 Internal Server Error in 19ms (ActiveRecord: 0.0ms | Allocations: 7873)
+
+
+  
+ActionView::Template::Error (undefined method `first name' for #<User:0x00007fc3a42679f0>):
+    23: 
+    24:   <div class="field">
+    25:     <%= f.label :first_name%><br />
+    26:     <%= f.text_field "first name" %>
+    27:   </div>
+    28: 
+    29:   <div class="field">
+  
+app/views/users/registrations/new.html.erb:26
+app/views/users/registrations/new.html.erb:3
+Started GET "/users/sign_up" for 127.0.0.1 at 2020-03-23 15:58:48 -0500
+Processing by Users::RegistrationsController#new as HTML
+  Rendering users/registrations/new.html.erb within layouts/application
+  Rendered /home/mmoroney/.rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/devise-4.7.1/app/views/devise/shared/_error_messages.html.erb (Duration: 1.8ms | Allocations: 189)
+  Rendered users/shared/_links.html.erb (Duration: 1.1ms | Allocations: 462)
+  Rendered users/registrations/new.html.erb within layouts/application (Duration: 11.7ms | Allocations: 2723)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 28ms (Views: 25.8ms | ActiveRecord: 0.0ms | Allocations: 8122)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2020-03-23 15:59:01 -0500
+Processing by Users::RegistrationsController#new as HTML
+  Rendering users/registrations/new.html.erb within layouts/application
+  Rendered /home/mmoroney/.rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/devise-4.7.1/app/views/devise/shared/_error_messages.html.erb (Duration: 0.7ms | Allocations: 189)
+  Rendered users/registrations/new.html.erb within layouts/application (Duration: 13.8ms | Allocations: 5689)
+Completed 500 Internal Server Error in 18ms (ActiveRecord: 0.0ms | Allocations: 7856)
+
+
+  
+ActionView::Template::Error (undefined method `first' for #<User:0x00007fc3a42b5a10>):
+    23: 
+    24:   <div class="field">
+    25:     <%= f.label :first_name%><br />
+    26:     <%= f.text_field :first %>
+    27:   </div>
+    28: 
+    29:   <div class="field">
+  
+app/views/users/registrations/new.html.erb:26
+app/views/users/registrations/new.html.erb:3
+Started GET "/users/sign_up" for 127.0.0.1 at 2020-03-23 15:59:08 -0500
+Processing by Users::RegistrationsController#new as HTML
+  Rendering users/registrations/new.html.erb within layouts/application
+  Rendered /home/mmoroney/.rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/devise-4.7.1/app/views/devise/shared/_error_messages.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered users/registrations/new.html.erb within layouts/application (Duration: 9.8ms | Allocations: 4791)
+Completed 500 Internal Server Error in 13ms (ActiveRecord: 0.0ms | Allocations: 5413)
+
+
+  
+ActionView::Template::Error (undefined method `first' for #<User:0x00007fc3a41cae70>):
+    23: 
+    24:   <div class="field">
+    25:     <%= f.label :first_name%><br />
+    26:     <%= f.text_field :first %>
+    27:   </div>
+    28: 
+    29:   <div class="field">
+  
+app/views/users/registrations/new.html.erb:26
+app/views/users/registrations/new.html.erb:3
+Started GET "/users/sign_in" for 127.0.0.1 at 2020-03-23 15:59:11 -0500
+Processing by Users::SessionsController#new as HTML
+  Rendering users/sessions/new.html.erb within layouts/application
+  Rendered users/shared/_links.html.erb (Duration: 1.3ms | Allocations: 526)
+  Rendered users/sessions/new.html.erb within layouts/application (Duration: 3.9ms | Allocations: 1856)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 12ms (Views: 11.0ms | ActiveRecord: 0.0ms | Allocations: 6859)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2020-03-23 16:00:03 -0500
+Processing by Users::SessionsController#new as HTML
+  Rendering users/sessions/new.html.erb within layouts/application
+  Rendered users/shared/_links.html.erb (Duration: 1.0ms | Allocations: 517)
+  Rendered users/sessions/new.html.erb within layouts/application (Duration: 7.8ms | Allocations: 1843)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 17ms (Views: 15.6ms | ActiveRecord: 0.0ms | Allocations: 7310)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2020-03-23 16:00:05 -0500
+Processing by Users::RegistrationsController#new as HTML
+  Rendering users/registrations/new.html.erb within layouts/application
+  Rendered /home/mmoroney/.rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/devise-4.7.1/app/views/devise/shared/_error_messages.html.erb (Duration: 0.7ms | Allocations: 189)
+  Rendered users/shared/_links.html.erb (Duration: 0.2ms | Allocations: 81)
+  Rendered users/registrations/new.html.erb within layouts/application (Duration: 8.9ms | Allocations: 2008)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 19ms (Views: 17.1ms | ActiveRecord: 0.0ms | Allocations: 6528)
+
+
