@@ -9,6 +9,19 @@ class Users::RegistrationsController < Devise::RegistrationsController
   #   super
   # end
 
+
+  def create
+    @user = User.create(user_params)
+    sign_in @user
+    redirect_to "/"
+  end
+
+  private
+
+  def user_params
+    params.require(:user).permit(:email, :password, :password_confirmation, :location, :children_ages, :range_possible_hours, :gender, :experience, :school, :age_range_kids_sit, :first_name, :last_name, :county, :cell_number, :services_needed_or_provided, :transportation, :availability, :age, :max_number_kids_sit, :zip_code)
+  end
+
   # POST /resource
   # def create
   #   super

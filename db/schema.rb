@@ -28,8 +28,16 @@ ActiveRecord::Schema.define(version: 2020_03_23_202717) do
     t.string "experience"
     t.string "school"
     t.string "age_range_kids_sit"
+    t.string "first_name"
+    t.string "last_name"
+    t.string "county"
+    t.string "cell_number"
+    t.string "services_needed_or_provided"
+    t.string "transportation"
+    t.string "availability"
     t.integer "age"
     t.integer "max_number_kids_sit"
+    t.integer "zip_code"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["email"], name: "index_users_on_email", unique: true
