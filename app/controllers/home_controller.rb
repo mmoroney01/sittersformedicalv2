@@ -1,10 +1,5 @@
 class HomeController < ApplicationController
     def index
-    	p "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
-      @users = User.where(user_params)
-
-      p @users
-
 	  render 'index'
 	end
 

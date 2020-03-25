@@ -6,7 +6,12 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-30.times do |user|
-  User.create(hero: rand(0..1), volunteer: rand(0..1), zip_code: rand(10000..99999), babysitting: rand(0..1), grocery_shopping: rand(0..1), e_learning_assistance: rand(0..1), sunday: rand(0..1), monday: rand(0..1), tuesday: rand(0..1), wednesday: rand(0..1), thursday: rand(0..1), friday: rand(0..1), saturday: rand(0..1), morning: rand(0..1), afternoon: rand(0..1), evening: rand(0..1), night: rand(0..1))
+
+900.times do
+  user = User.new(hero: rand(0..1), volunteer: rand(0..1), zip_code: rand(10000..99999), babysitting: rand(0..1), grocery_shopping: rand(0..1), e_learning_assistance: rand(0..1), sunday: rand(0..1), monday: rand(0..1), tuesday: rand(0..1), wednesday: rand(0..1), thursday: rand(0..1), friday: rand(0..1), saturday: rand(0..1), morning: rand(0..1), afternoon: rand(0..1), evening: rand(0..1), night: rand(0..1))
+  user.email = SecureRandom.alphanumeric + "@gmail.com"
+  user.password = "testword"
+  user.encrypted_password = '#$taawktljasktlw4aaglj'
+  user.save!
 end
 

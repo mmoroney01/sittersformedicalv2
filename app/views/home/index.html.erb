@@ -2,6 +2,8 @@
 
   <%= link_to new_user_session_path, class: 'login-button' do %>Sign in<% end %>
 
+  <h1>Search our Database!</h1>
+
   <%= form_with model: User, url: '/users', method: :get, local: true do |f| %>
     I'm ready to VOLUNTEER<%= f.check_box :volunteer, placeholder: "volunteer" %><br>
     I need a VOLUNTEER<%= f.check_box :hero, placeholder: "hero" %><br><br>
@@ -25,11 +27,5 @@
 
     <%= f.submit "Search" %>
   <% end %>
-
-  <% if params %>
-    <%= p params %>
-  <% end %>
-
-	<h1>Search our Database!</h1>
 
   <%= link_to destroy_user_session_path, method: :delete do %>Log out<% end %>
