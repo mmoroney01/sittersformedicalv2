@@ -3,6 +3,9 @@
 <%= form_for(@user, as: resource_name, url: registration_path(resource_name)) do |f| %>
   <%= render "devise/shared/error_messages", resource: resource %>
 
+  I am a VOLUNTEER<%= f.check_box :volunteer, placeholder: "volunteer" %>
+  I am a HERO<%= f.check_box :hero, placeholder: "hero" %>
+
   <div class="field">
     <%= f.email_field :email, placeholder: "Email:", autofocus: true, autocomplete: "email" %>
   </div>
@@ -24,10 +27,6 @@
   </div>
 
   <div class="field">
-    <%= f.text_field :county, placeholder: "County:" %>
-  </div>
-
-  <div class="field">
     <%= f.text_field :zip_code, placeholder: "Zip Code XXXXX:" %>
   </div>  
 
@@ -46,26 +45,28 @@
     <%= f.select :county, ["Cook", "Lake", "Will", "DuPage", "Kane", "McHenry"] %>
   </div>
 
-  <h6>Babysitting</h6><input type="checkbox" name="services_needed_or_provided" value="1" /><br>
-  <h6>Grocery Shopping</h6><input type="checkbox" name="services_needed_or_provided" value="2" /><br>
-  <h6>E-Learning Assistance</h6><input type="checkbox" name="services_needed_or_provided" value="3" /><br>
+  <br>
+
+  Babysitting<%= f.check_box :babysitting, placeholder: "babysitting" %>
+  Grocery Shopping<%= f.check_box :grocery_shopping, placeholder: "grocery_shopping" %>
+  E-Learning Assistance<%= f.check_box :e_learning_assistance, placeholder: "e_learning_assistance" %>
 
   <h2>For Volunteers Only</h2>
 
   <h3>Availability</h3>
 
-  Sunday<input type="checkbox" name="availability" value="1" />
-  Monday<input type="checkbox" name="availability" value="1" />
-  Tuesday<input type="checkbox" name="availability" value="1" />
-  Wednesday<input type="checkbox" name="availability" value="1" />
-  Thursday<input type="checkbox" name="availability" value="1" />
-  Friday<input type="checkbox" name="availability" value="1" />
-  Saturday<input type="checkbox" name="availability" value="1" /><br><br>
-  Morning<input type="checkbox" name="availability" value="1" />
-  Afternoon<input type="checkbox" name="availability" value="1" />
-  Evening<input type="checkbox" name="availability" value="1" />
-  Night<input type="checkbox" name="availability" value="1" />
-  Other<input type="checkbox" name="availability" value="1" /><br><br><br>
+  Sunday<%= f.check_box :sunday, placeholder: "sunday" %>
+  Monday<%= f.check_box :monday, placeholder: "monday" %>
+  Tuesday<%= f.check_box :tuesday, placeholder: "tuesday" %>
+  Wednesday<%= f.check_box :wednesday, placeholder: "wednesday" %>
+  Thursday<%= f.check_box :thursday, placeholder: "thursday" %>
+  Friday<%= f.check_box :friday, placeholder: "friday" %>
+  Saturday<%= f.check_box :saturday, placeholder: "saturday" %><br><br>
+  Morning<%= f.check_box :morning, placeholder: "morning" %>
+  Afternoon<%= f.check_box :afternoon, placeholder: "afternoon" %>
+  Evening<%= f.check_box :evening, placeholder: "evening" %>
+  Night<%= f.check_box :night, placeholder: "night" %>
+  Other<%= f.check_box :other, placeholder: "other" %><br><br><br>
 
   <div class="field">
     <%= f.label :age%><br>
