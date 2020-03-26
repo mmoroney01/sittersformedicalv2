@@ -1,7 +1,4 @@
 
-
-  <%= link_to new_user_session_path, class: 'login-button' do %>Sign in<% end %>
-
   <h1>Search our Database!</h1>
 
   <%= form_with model: User, url: '/users', method: :get, local: true do |f| %>
@@ -28,4 +25,13 @@
     <%= f.submit "Search" %>
   <% end %>
 
+
+<% if !user_signed_in? %>
+  <%= link_to new_user_session_path, class: 'login-button' do %>Sign in<% end %>
+<% end %>
+
+<% if user_signed_in? %>
   <%= link_to destroy_user_session_path, method: :delete do %>Log out<% end %>
+<% end %>
+
+<h1>Disclaimers Go Here</h1>

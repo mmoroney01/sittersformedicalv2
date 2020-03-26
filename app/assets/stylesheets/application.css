@@ -13,3 +13,19 @@
  *= require_tree .
  *= require_self
  */
+
+ .everyone_div{ 
+  text-align:center;
+ }
+
+ .hero_div {
+  float:left;
+  width: 49%;
+  text-align:center;
+ }
+
+.volunteer_div {
+  float:left;
+  width:49%;
+  text-align:center;
+ }

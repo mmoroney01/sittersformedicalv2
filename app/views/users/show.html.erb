@@ -1,6 +1,81 @@
-<h1>Just nod if you can hear me!</h1>
 
-<%= @users.length %>
-<% @users.each do |user| %>
-<%= user %>
-<% end %>
+  <% @users.each do |user| %>
+    <% if user.volunteer == 1 %>
+      <% if user.zip_code %>
+        Zip Code: <%= user.zip_code %><br>
+      <% end %>
+      <% if user.gender %>
+        Gender: <% user.gender %>
+      <% end %>
+      <% if user.sunday %>
+        Available Sunday
+      <% end %><br>
+      <% if user.monday %>
+        Available Monday
+      <% end %><br>
+      <% if user.tuesday %>
+        Available Tuesday
+      <% end %><br>
+      <% if user.wednesday %>
+        Available Wednesday
+      <% end %><br>
+      <% if user.thursday %>
+        Available Thursday
+      <% end %><br>
+      <% if user.friday %>
+        Available Friday
+      <% end %><br>
+      <% if user.saturday %>
+        Available Saturday
+      <% end %><br>
+      <% if user.morning %>
+        Available in the Morning
+      <% end %><br>
+      <% if user.afternoon %>
+        Available in the Afternoon
+      <% end %><br>
+      <% if user.evening %>
+        Available in the Evening
+      <% end %><br>
+      <% if user.night %>
+        Available at Night
+      <% end %><br>
+      <% if user.experience %>
+        Experience: <%= user.experience%>
+      <% end %><br>
+      <% if user.school %>
+        School: <%= user.school%>
+      <% end %><br>
+      <% if user.age_range_kids_sit %>
+        Will sit for this many children: <%= user.age_range_kids_sit%>
+      <% end %><br>
+      <% if user.first_name %>
+        Name: <%= user.first_name%>
+      <% end %><br>
+      <%= user.first_name if user.first_name %><br>
+      <%= user.county if user.county %><br>
+      <%= user.cell_number if user.cell_number %><br>
+      <%= user.services_needed_or_provided if user.services_needed_or_provided %><br>
+      <%= user.yes_transit if user.yes_transit %><br>
+      <%= user.no_transit if user.no_transit %><br>
+      <%= user.age_16 if user.age_16 %><br>
+      <%= user.age_17 if user.age_17 %><br>
+      <%= user.age_18_up if user.age_18_up %><br>            
+      <%= user.max_number_kids_sit if user.max_number_kids_sit%><br>
+    <% end %>
+
+    <% if user.hero == 1 %>
+      <%= user.children_ages%><br>
+      <%= user.range_possible_hours %><br>
+      <%= user.zip_code %><br>
+      <%= user.gender %><br>
+      <%= user.first_name %><br>
+      <%= user.last_name %><br>
+      <%= user.county %><br>
+      <%= user.cell_number %><br>
+      <%= user.services_needed_or_provided %><br>
+      <%= user.babysitting %><br>
+      <%= user.grocery_shopping %><br>
+      <%= user.e_learning_assistance %><br>
+    <% end %>
+ <% end %>

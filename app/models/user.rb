@@ -3,5 +3,6 @@ class User < ApplicationRecord
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
-  # validates :zip_code, :numericality => {:only_integer => true}
+  validates :zip_code, length: { is: 5 }
+  validates :cell_number, length: { is: 12 }
 end

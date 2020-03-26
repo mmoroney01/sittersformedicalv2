@@ -1,11 +1,14 @@
 Rails.application.routes.draw do
-  devise_for :users, controllers: {
+  get "/" => "home#index"  
+  get "/users" => "users#index"
+  
+devise_for :users, controllers: {
     sessions: 'users/sessions',
     passwords: 'users/passwords',
     registrations: 'users/registrations',
 }
-  get "/users" => "users#index"
-  get "/" => "home#index"
+
+  
 
 
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html

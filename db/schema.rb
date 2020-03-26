@@ -33,8 +33,11 @@ ActiveRecord::Schema.define(version: 2020_03_23_202717) do
     t.string "county"
     t.string "cell_number"
     t.string "services_needed_or_provided"
-    t.string "transportation"
-    t.integer "age"
+    t.integer "yes_transit"
+    t.integer "no_transit"
+    t.integer "age_16"
+    t.integer "age_17"
+    t.integer "age_18_up"
     t.integer "max_number_kids_sit"
     t.integer "zip_code"
     t.integer "hero"
@@ -54,6 +57,10 @@ ActiveRecord::Schema.define(version: 2020_03_23_202717) do
     t.integer "evening"
     t.integer "night"
     t.integer "other"
+    t.integer "c_morning"
+    t.integer "c_afternoon"
+    t.integer "c_evening"
+    t.integer "c_night"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["email"], name: "index_users_on_email", unique: true
