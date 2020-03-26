@@ -72,9 +72,12 @@
         17<%= f.check_box :age_17, placeholder: "age" %>
         18+<%= f.check_box :age_18_up, placeholder: "age" %><br><br>
 
-        Transportation?:<br>
-        Yes<%= f.check_box :yes_transit, placeholder: "yes_transit" %>
-        No<%= f.check_box :no_transit, placeholder: "no_transit" %>
+        Transportation? Yes<%= f.check_box :yes_transit, placeholder: "yes_transit" %>
+        No<%= f.check_box :no_transit, placeholder: "no_transit" %><br>
+
+        Services Provided<br>
+          <%= f.text_area :services_needed_or_provided, size:"40x7", :maxlength => 250 %>
+        </div>
       </div>
     </div>
 

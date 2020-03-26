@@ -1,37 +1,59 @@
 
   <h1>Search our Database!</h1>
-
+  <div class="hero_div">
   <%= form_with model: User, url: '/users', method: :get, local: true do |f| %>
-    I'm ready to VOLUNTEER<%= f.check_box :volunteer, placeholder: "volunteer" %><br>
-    I need a VOLUNTEER<%= f.check_box :hero, placeholder: "hero" %><br><br>
+    I need a Volunteer!<%= f.check_box :hero, placeholder: "hero" %><br><br>
 
     <%= f.text_field :zip_code, placeholder: "Zip Code XXXXX:" %><br><br>
 
-    I need: a Babysitter<%= f.check_box :babysitting, placeholder: "babysitting" %>
-    a Grocery Shopper<%= f.check_box :grocery_shopping, placeholder: "grocery_shopping" %>
+    Services Needed: Babysitting<%= f.check_box :babysitting, placeholder: "babysitting" %>
+    Grocery Shopping<%= f.check_box :grocery_shopping, placeholder: "grocery_shopping" %>
     E-Learning Assistance<%= f.check_box :e_learning_assistance, placeholder: "e_learning_assistance" %><br><br>
-    I need someone on: Sunday<%= f.check_box :sunday, placeholder: "sunday" %>
+    I Need Someone Available on the Following Days:<br>
+    Sunday<%= f.check_box :sunday, placeholder: "sunday" %>
     Monday<%= f.check_box :monday, placeholder: "monday" %>
     Tuesday<%= f.check_box :tuesday, placeholder: "tuesday" %>
     Wednesday<%= f.check_box :wednesday, placeholder: "wednesday" %>
     Thursday<%= f.check_box :thursday, placeholder: "thursday" %>
     Friday<%= f.check_box :friday, placeholder: "friday" %>
     Saturday<%= f.check_box :saturday, placeholder: "saturday" %><br><br>
+    I Need Someone Available at the Following Times:<br>
     Morning<%= f.check_box :morning, placeholder: "morning" %>
     Afternoon<%= f.check_box :afternoon, placeholder: "afternoon" %>
     Evening<%= f.check_box :evening, placeholder: "evening" %>
     Night<%= f.check_box :night, placeholder: "night" %><br><br>
 
-    <%= f.submit "Search" %>
-  <% end %>
-
-
-<% if !user_signed_in? %>
-  <%= link_to new_user_session_path, class: 'login-button' do %>Sign in<% end %>
+    I Need Someone With Transportation<%= f.check_box :yes_transit, placeholder: "yes_transit" %>
+    I Don't Need Someone With Transportation<%= f.check_box :no_transit, placeholder: "no_transit" %><br>
+    <div class="search_div"><%= f.submit "Search" %></div>
+    </div>
 <% end %>
 
-<% if user_signed_in? %>
-  <%= link_to destroy_user_session_path, method: :delete do %>Log out<% end %>
+  <div class="volunteer_div">
+    <%= form_with model: User, url: '/users', method: :get, local: true do |f| %>
+    I am Willing to Volunteer<%= f.check_box :volunteer, placeholder: "volunteer" %><br><br>
+    <%= f.text_field :zip_code, placeholder: "Zip Code XXXXX:" %><br><br>
+    Services Provided: Babysitting<%= f.check_box :babysitting, placeholder: "babysitting" %>
+    Grocery Shopping<%= f.check_box :grocery_shopping, placeholder: "grocery_shopping" %>
+    E-Learning Assistance<%= f.check_box :e_learning_assistance, placeholder: "e_learning_assistance" %><br><br>
+    I am Available on the Following Days:<br>
+    Sunday<%= f.check_box :sunday, placeholder: "sunday" %>
+    Monday<%= f.check_box :monday, placeholder: "monday" %>
+    Tuesday<%= f.check_box :tuesday, placeholder: "tuesday" %>
+    Wednesday<%= f.check_box :wednesday, placeholder: "wednesday" %>
+    Thursday<%= f.check_box :thursday, placeholder: "thursday" %>
+    Friday<%= f.check_box :friday, placeholder: "friday" %>
+    Saturday<%= f.check_box :saturday, placeholder: "saturday" %><br><br>
+    I am Available at the Following Times:<br>
+    Morning<%= f.check_box :morning, placeholder: "morning" %>
+    Afternoon<%= f.check_box :afternoon, placeholder: "afternoon" %>
+    Evening<%= f.check_box :evening, placeholder: "evening" %>
+    Night<%= f.check_box :night, placeholder: "night" %><br><br>
+    I Have Transportation<%= f.check_box :yes_transit, placeholder: "yes_transit" %>
+    I Don't Have Transportation<%= f.check_box :no_transit, placeholder: "no_transit" %><br>
+    <div class="search_div"><%= f.submit "Search" %></div>
+  </div>
 <% end %>
 
-<h1>Disclaimers Go Here</h1>
+  <br><br><br><br><br><br><br><br><br><br>
+  <h1>Disclaimers Go Here</h1>

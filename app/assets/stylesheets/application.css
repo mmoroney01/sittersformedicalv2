@@ -14,6 +14,10 @@
  *= require_self
  */
 
+ .search_div {
+ 	text-align: center;
+ }
+
  .everyone_div{ 
   text-align:center;
  }
@@ -22,10 +26,14 @@
   float:left;
   width: 49%;
   text-align:center;
+  border-color:black;
+  border-style:solid;
  }
 
 .volunteer_div {
   float:left;
   width:49%;
   text-align:center;
+    border-color:black;
+  border-style:solid;
  }
