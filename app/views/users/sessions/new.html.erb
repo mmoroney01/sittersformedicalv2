@@ -25,32 +25,4 @@
 
 <%= render "users/shared/links" %>
 
-<h1>Search our Database!</h1>
-
-  <%= form_with model: User, url: '/users', method: :get, local: true do |f| %>
-    I'm ready to VOLUNTEER<%= f.check_box :volunteer, placeholder: "volunteer" %><br>
-    I need a VOLUNTEER<%= f.check_box :hero, placeholder: "hero" %><br><br>
-
-    <%= f.text_field :zip_code, placeholder: "Zip Code XXXXX:" %><br><br>
-
-    I need: a Babysitter<%= f.check_box :babysitting, placeholder: "babysitting" %>
-    a Grocery Shopper<%= f.check_box :grocery_shopping, placeholder: "grocery_shopping" %>
-    E-Learning Assistance<%= f.check_box :e_learning_assistance, placeholder: "e_learning_assistance" %><br><br>
-    I need someone on: Sunday<%= f.check_box :sunday, placeholder: "sunday" %>
-    Monday<%= f.check_box :monday, placeholder: "monday" %>
-    Tuesday<%= f.check_box :tuesday, placeholder: "tuesday" %>
-    Wednesday<%= f.check_box :wednesday, placeholder: "wednesday" %>
-    Thursday<%= f.check_box :thursday, placeholder: "thursday" %>
-    Friday<%= f.check_box :friday, placeholder: "friday" %>
-    Saturday<%= f.check_box :saturday, placeholder: "saturday" %><br><br>
-    Morning<%= f.check_box :morning, placeholder: "morning" %>
-    Afternoon<%= f.check_box :afternoon, placeholder: "afternoon" %>
-    Evening<%= f.check_box :evening, placeholder: "evening" %>
-    Night<%= f.check_box :night, placeholder: "night" %><br><br>
-
-    <%= f.submit "Search" %>
-  <% end %>
-
-
-
-  <h1>Disclaimers Go Here</h1>
+<h1>Disclaimers Go Here</h1>

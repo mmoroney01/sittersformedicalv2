@@ -6,29 +6,15 @@ class UsersController < ApplicationController
       if v.to_i >= 1
         new_hash[k.to_sym] = v.to_i
       end
-      # if k == "volunteer"
-      #   new_hash[:hero] = new_hash.delete(:volunteer)
-      # end
-      # if k == "hero"
-      #   new_hash[:volunteer] = new_hash.delete(:hero)
-      # end
     end
 
-    # p "AAAA"
-
-    # p new_hash
-
-    # p "AAAA"
-    # @users = User.where(new_hash)
-
-    # p new_hash[:hero]
-    # p new_hash[:volunteer]
+    @users = User.where(new_hash)
 
     if new_hash[:hero] == 1
-      render 'hcw_show'
+      render 'sitter_show'
     end
     if new_hash[:volunteer] == 1
-      render 'sitter_show'
+      render 'hcw_show'
     end
 	end
 

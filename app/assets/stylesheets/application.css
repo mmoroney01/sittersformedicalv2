@@ -14,26 +14,32 @@
  *= require_self
  */
 
- .search_div {
- 	text-align: center;
- }
-
- .everyone_div{ 
-  text-align:center;
- }
-
- .hero_div {
-  float:left;
-  width: 49%;
-  text-align:center;
+ .register_page {
   border-color:black;
   border-style:solid;
  }
 
-.volunteer_div {
-  float:left;
-  width:49%;
+ .container {
+  overflow: hidden;
+  width: 100%;
+}
+
+ .everyone_div{
   text-align:center;
-    border-color:black;
-  border-style:solid;
  }
+
+ .hero_div {
+  float: left;
+  width: 50%;
+  text-align:center;
+  padding-bottom: 500em;
+  margin-bottom: -500em;
+}
+ .volunteer_div {
+  float: left;
+  width: 50%;
+  text-align:center;
+  margin-right: -1px; /* Thank you IE */
+  padding-bottom: 500em;
+  margin-bottom: -500em;
+}
