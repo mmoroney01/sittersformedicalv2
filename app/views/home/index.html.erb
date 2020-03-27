@@ -7,7 +7,7 @@
   <h3>Please select only ONE of the following: "I need a Volunteer!" OR "I am Willing to Volunteer"</h3>
 
   <div class="hero_div">
-    <%= form_with model: User, url: '/users', method: :get, local: true do |f| %>
+    <%= form_with model: User, url: '/users', method: :get, remote: true do |f| %>
       <br>
       I need a Volunteer!<%= f.check_box :hero, placeholder: "hero" %><br><br>
       Zip Code 
@@ -37,7 +37,7 @@
   </div>
 
   <div class="volunteer_div">
-    <%= form_with model: User, url: '/users', method: :get, local: true do |f| %>
+    <%= form_with model: User, url: '/users', method: :get, remote: true do |f| %>
       <br>
       I am Willing to Volunteer<%= f.check_box :volunteer, placeholder: "volunteer" %><br><br>
       Zip Code <%= f.text_field :zip_code, placeholder: "Zip Code XXXXX:" %><br><br>
@@ -65,4 +65,4 @@
 
 
   <br><br><br><br><br><br><br><br><br><br>
-  <h1>Disclaimers Go Here</h1>
+  <h1 id="#search-results-append">Disclaimers Go Here</h1>

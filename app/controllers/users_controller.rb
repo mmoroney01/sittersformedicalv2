@@ -10,12 +10,12 @@ class UsersController < ApplicationController
 
     @users = User.where(new_hash)
 
-    if new_hash[:hero] == 1
-      render 'sitter_show'
+    respond_to do |f|
+      f.html { redirect_to "/" }
+      f.js { render "index.js.erb" }
     end
-    if new_hash[:volunteer] == 1
-      render 'hcw_show'
-    end
+
+
 	end
 
   private

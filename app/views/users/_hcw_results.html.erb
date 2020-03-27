@@ -1,0 +1,63 @@
+<%= @users.length %>
+  <% @users.each do |user| %>
+    <% if user.zip_code %>
+      Zip Code: <%= user.zip_code %><br>
+    <% end %>
+    <% if user.gender %>
+      Gender: <% user.gender %><br>
+    <% end %>
+    <% if user.sunday == 1 %>
+      Needs Help on Sunday<br>
+    <% end %>
+    <% if user.monday == 1 %>
+      Needs Help on Monday<br>
+    <% end %>
+    <% if user.tuesday == 1 %>
+      Needs Help on Tuesday<br>
+    <% end %>
+    <% if user.wednesday == 1 %>
+      Needs Help on Wednesday<br>
+    <% end %>
+    <% if user.thursday == 1 %>
+      Needs Help on Thursday<br>
+    <% end %>
+    <% if user.friday == 1 %>
+      Needs Help on Friday<br>
+    <% end %>
+    <% if user.saturday == 1 %>
+      Needs Help on Saturday<br>
+    <% end %>
+    <% if user.morning == 1%>
+      Needs Help in the Morning<br>
+    <% end %>
+    <% if user.afternoon == 1%>
+      Needs Help in the Afternoon<br>
+    <% end %>
+    <% if user.evening == 1%>
+      Needs Help in the Evening<br>
+    <% end %>
+    <% if user.night == 1%>
+      Needs Help at Night<br>
+    <% end %>
+    <% if user.first_name %>
+      Name: <%= user.first_name%><br>
+    <% end %>
+    <% if user.cell_number %>
+      Phone Number: <%= user.cell_number %><br>
+    <% end %>
+    <% if user.yes_transit == 1%>
+      Transportation is Necessary<br>
+    <% end %>
+    <% if user.no_transit == 1%>
+      Transportation is Not Necessary<br>
+    <% end %>
+    <% if user.babysitting == 1%>
+      Needs Babysitting<br>
+    <% end %>
+    <% if user.grocery_shopping == 1%>
+      Needs Grocery Shopping<br>
+    <% end %>
+    <% if user.e_learning_assistance == 1%>
+      Needs Assistance With E-Learning<br>
+    <% end %><br><br>
+ <% end %>
