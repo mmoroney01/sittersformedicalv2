@@ -1,5 +1,23 @@
 class UsersController < ApplicationController
-  def index
+  def hero_index
+    @users = users(user_params)
+
+    respond_to do |f|
+      f.html { redirect_to "/" }
+      f.js { render "hcw_index.js.erb" }
+    end
+	end
+
+  def volunteer_index
+    @users = users(user_params)
+
+    respond_to do |f|
+      f.html { redirect_to "/" }
+      f.js { render "sitter_index.js.erb" }
+    end
+  end
+
+  def users(parameters)
     new_hash = Hash.new
 
     user_params.each do |k,v|
@@ -8,15 +26,8 @@ class UsersController < ApplicationController
       end
     end
 
-    @users = User.where(new_hash)
-
-    respond_to do |f|
-      f.html { redirect_to "/" }
-      f.js { render "index.js.erb" }
-    end
-
-
-	end
+    User.where(new_hash)
+  end
 
   private
 

@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
-  get "/" => "home#index"  
-  get "/users" => "users#index"
+  get "/" => "home#index"
+  get "/users/hero_index" => "users#hero_index"
+  get "/users/volunteer_index" => "users#volunteer_index"
   
 devise_for :users, controllers: {
     sessions: 'users/sessions',

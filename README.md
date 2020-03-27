@@ -8,12 +8,7 @@
     <%= link_to destroy_user_session_path, method: :delete do %>Log out<% end %>
   <% end %>
 
-      if new_hash[:hero] == 1
-      render 'sitter_show'
-    end
-    if new_hash[:volunteer] == 1
-      render 'hcw_show'
-    end
+      
 
 
 Hi, I'm Jordan Colgan and I created this website so we match volunteers willing to help the healthcare heroes and essential worker warriors who are working around the clock to fight and win the war against COVID-19. THANK YOU.

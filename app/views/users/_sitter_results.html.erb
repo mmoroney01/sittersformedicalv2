@@ -1,5 +1,9 @@
-<%= @users.length %>
+<% if @users.length == 0%>
+  No Results.
+<% end %>
+<div class="results">
   <% @users.each do |user| %>
+    <div class="one_result">
     <% if user.zip_code %>
       Zip Code: <%= user.zip_code %><br>
     <% end %>
@@ -80,5 +84,7 @@
     <% end %>
     <% if user.e_learning_assistance == 1%>
       Can Assist With E-Learning<br>
-    <% end %><br><br>
+    <% end %>
+  </div>
  <% end %>
+</div>
