@@ -1,12 +1,12 @@
-<h1 style="color:blue;">Register</h1>
+<h1>Register</h1>
 
 <div class="register_page">
   <%= form_for(@user, as: resource_name, url: registration_path(resource_name)) do |f| %>
     <%= render "devise/shared/error_messages", resource: resource %>
       <div class="container">
 
-        <div class="hero_div">
-          <h2 style="color:blue;">Healthcare Heroes</h2>
+        <div class="hero_div_register">
+          <h2>Healthcare Heroes</h2>
           I am a Health Care Hero<%= f.check_box :hero, placeholder: "hero" %><br><br>      
 
           Services Wanted:<br>
@@ -22,14 +22,10 @@
 
           Services Wanted<br>
           <%= f.text_area :services_needed_or_provided, size:"40x7", placeholder: "We Can Do It!", :maxlength => 250 %>    
-
-          <br><br>    
-
-          <img class="Rosie" width="512" height="288" src="https://images.fastcompany.net/image/upload/w_1280,f_auto,q_auto,fl_lossy/wp-cms/uploads/2018/06/p-2-90176641-what-the-iconic-rosie-the-riveter-poster-tktktk-1.jpg" alt="Rosie the Riveter">
         </div>  
 
-        <div class="volunteer_div">
-          <h2 style="color:blue;">Volunteers for Victory</h2>      
+        <div class="volunteer_div_register">
+          <h2>Volunteers for Victory</h2>      
 
           I am a Volunteer for Victory<%= f.check_box :volunteer, placeholder: "volunteer" %><br><br>     
 
@@ -70,9 +66,7 @@
           Services Provided<br>
             <%= f.text_area :services_needed_or_provided, size:"40x7", placeholder: "We Can Do It!", :maxlength => 250 %>
           </div>
-        </div>  
-
-          <div class="everyone_div">
+          <div class="everyone_div_register">
             <h2>For Everyone</h2>
               <%= f.email_field :email, placeholder: "Email:", autofocus: true, autocomplete: "email" %><br>     
               <%= f.password_field :password, placeholder: "Password:", autocomplete: "new-password" %><br>     
@@ -88,9 +82,7 @@
                <%= f.submit "Sign up" %>
               </div>
             </div>
-             <br>
+        </div>  
         </div>
     <% end %>
 </div>
-<br><br><br><br><br><br><br><br><br><br><br><br>
-<h1>DISCLAIMERS GO HERE</h1>

@@ -1,17 +1,15 @@
+# frozen_string_literal: true
+
 Rails.application.routes.draw do
-  get "/" => "home#index"
-  get "/users/hero_index" => "users#hero_index"
-  get "/users/volunteer_index" => "users#volunteer_index"
-  get "/users/test" => "users#test"
-  
-devise_for :users, controllers: {
+  get '/' => 'home#index'
+  get '/users/hero_index' => 'users#hero_index'
+  get '/users/volunteer_index' => 'users#volunteer_index'
+
+  devise_for :users, controllers: {
     sessions: 'users/sessions',
     passwords: 'users/passwords',
-    registrations: 'users/registrations',
-}
-
-  
-
+    registrations: 'users/registrations'
+  }
 
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end

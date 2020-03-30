@@ -1,31 +1,31 @@
+# frozen_string_literal: true
+
 class UsersController < ApplicationController
   skip_before_action :authenticate_user!
-  
+
   def hero_index
     @users = users(user_params)
 
     respond_to do |f|
-      f.html { redirect_to "/" }
-      f.js { render "hcw_index.js.erb" }
+      f.html { redirect_to '/' }
+      f.js { render 'hcw_index.js.erb' }
     end
-	end
+  end
 
   def volunteer_index
     @users = users(user_params)
 
     respond_to do |f|
-      f.html { redirect_to "/" }
-      f.js { render "sitter_index.js.erb" }
+      f.html { redirect_to '/' }
+      f.js { render 'sitter_index.js.erb' }
     end
   end
 
-  def users(parameters)
-    new_hash = Hash.new
+  def users(_parameters)
+    new_hash = {}
 
-    user_params.each do |k,v|
-      if v.to_i >= 1
-        new_hash[k.to_sym] = v.to_i
-      end
+    user_params.each do |k, v|
+      new_hash[k.to_sym] = v.to_i if v.to_i >= 1
     end
 
     User.where(new_hash)

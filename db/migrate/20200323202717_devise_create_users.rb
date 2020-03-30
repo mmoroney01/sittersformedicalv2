@@ -1,9 +1,11 @@
+# frozen_string_literal: true
+
 class DeviseCreateUsers < ActiveRecord::Migration[6.0]
   def change
     create_table :users do |t|
       ## Database authenticatable
-      t.string :email,              null: false, default: ""
-      t.string :encrypted_password, null: false, default: ""
+      t.string :email,              null: false, default: ''
+      t.string :encrypted_password, null: false, default: ''
 
       ## Recoverable
       t.string   :reset_password_token
@@ -32,7 +34,6 @@ class DeviseCreateUsers < ActiveRecord::Migration[6.0]
 
       t.string :location, :children_ages, :range_possible_hours, :gender, :experience, :school, :age_range_kids_sit, :first_name, :last_name, :county, :cell_number, :services_needed_or_provided
       t.integer :yes_transit, :no_transit, :age_16, :age_17, :age_18_up, :max_number_kids_sit, :zip_code, :hero, :volunteer, :babysitting, :grocery_shopping, :e_learning_assistance, :sunday, :monday, :tuesday, :wednesday, :thursday, :friday, :saturday, :morning, :afternoon, :evening, :night, :other, :c_morning, :c_afternoon, :c_evening, :c_night
-
 
       t.timestamps null: false
     end
