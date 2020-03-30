@@ -8,7 +8,7 @@
     <%= link_to destroy_user_session_path, method: :delete do %>Log out<% end %>
   <% end %>
 
-      
+
 
 
 Hi, I'm Jordan Colgan and I created this website so we match volunteers willing to help the healthcare heroes and essential worker warriors who are working around the clock to fight and win the war against COVID-19. THANK YOU.

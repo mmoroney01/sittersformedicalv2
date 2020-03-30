@@ -1,4 +1,6 @@
 class UsersController < ApplicationController
+  skip_before_action :authenticate_user!
+  
   def hero_index
     @users = users(user_params)
 

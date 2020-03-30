@@ -1,55 +1,111 @@
-<head>
-  <meta name="viewport" content="user-scalable=no, width=device-width" />
-</head>
-<body style="background-color:lightblue;">
-
-<div class="login_div">
-  <h2>Log in</h2>
-<%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-  <div class="field">
-    <%= f.label :email %><br>
-    <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
-  </div>
-  <br>
-  <div class="field">
-    <%= f.label :password %><br>
-    <%= f.password_field :password, autocomplete: "current-password" %>
-  </div>
-<br>
-  <% if devise_mapping.rememberable? %>
+<div class="login_title_rosie">
+  <div class="login_div">
+    <h2>Log in</h2>
+  <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
     <div class="field">
-      <%= f.check_box :remember_me %>
-      <%= f.label :remember_me %>
+      <%= f.label :email %><br>
+      <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
     </div>
-  <% end %>
+    <br>
+    <div class="field">
+      <%= f.label :password %><br>
+      <%= f.password_field :password, autocomplete: "current-password" %>
+    </div>
+  <br>
+    <% if devise_mapping.rememberable? %>
+      <div class="field">
+        <%= f.check_box :remember_me %>
+        <%= f.label :remember_me %>
+      </div>
+    <% end %>  
+
+    <br>  
+
+    <div class="actions">
+      <%= f.submit "Log in" %>
+    </div>
+  <% end %>  
+
+  <br>  
+
+  <%= render "users/shared/links" %>
 
   <br>
 
-  <div class="actions">
-    <%= f.submit "Log in" %>
   </div>
-<% end %>
 
-<br>
+  <br>
 
-<%= render "users/shared/links" %>
+  <div class="title_rosie">
+    COVID-19 Volunteers for Victory
+    <br>
+    <img src="https://images.fastcompany.net/image/upload/w_640,f_auto,q_auto,fl_lossy/wp-cms/uploads/2018/06/p-2-90176641-what-the-iconic-rosie-the-riveter-poster-tktktk-1.jpg">
+  </div>
 </div>
 
 <br>
 
-<div class="app_title">
-  COVID-19 Volunteers for Victory
+<div class="hero_volunteer_div">
+    <div class="hero_div">
+    <%= form_with model: User, url: '/users/volunteer_index', method: :get, remote: true do |f| %>
+      <br>
+      I need a Volunteer!<%= f.check_box :hero, placeholder: "hero" %><br><br>
+      Zip Code 
+      <%= f.text_field :zip_code, placeholder: "Zip Code XXXXX:" %><br><br>  
+
+      Services Needed: Babysitting<%= f.check_box :babysitting, placeholder: "babysitting" %>
+      Grocery Shopping<%= f.check_box :grocery_shopping, placeholder: "grocery_shopping" %>
+      E-Learning Assistance<%= f.check_box :e_learning_assistance, placeholder: "e_learning_assistance" %><br><br>
+      I Need Someone Available on the Following Days:<br>
+      Sunday<%= f.check_box :sunday, placeholder: "sunday" %>
+      Monday<%= f.check_box :monday, placeholder: "monday" %>
+      Tuesday<%= f.check_box :tuesday, placeholder: "tuesday" %>
+      Wednesday<%= f.check_box :wednesday, placeholder: "wednesday" %>
+      Thursday<%= f.check_box :thursday, placeholder: "thursday" %>
+      Friday<%= f.check_box :friday, placeholder: "friday" %>
+      Saturday<%= f.check_box :saturday, placeholder: "saturday" %><br><br>
+      I Need Someone Available at the Following Times:<br>
+      Morning<%= f.check_box :morning, placeholder: "morning" %>
+      Afternoon<%= f.check_box :afternoon, placeholder: "afternoon" %>
+      Evening<%= f.check_box :evening, placeholder: "evening" %>
+      Night<%= f.check_box :night, placeholder: "night" %><br><br>  
+
+      I Need Someone With Transportation<%= f.check_box :yes_transit, placeholder: "yes_transit" %>
+      I Don't Need Someone With Transportation<%= f.check_box :no_transit, placeholder: "no_transit" %><br><br>
+      <div class="search_div"><%= f.submit "Search" %></div><br>
+    <% end %>
+  </div>
+
+    <div class="volunteer_div">
+    <%= form_with model: User, url: '/users/hero_index', method: :get, remote: true do |f| %>
+      <br>
+      I am Willing to Volunteer<%= f.check_box :volunteer, placeholder: "volunteer" %><br><br>
+      Zip Code <%= f.text_field :zip_code, placeholder: "Zip Code XXXXX:" %><br><br>
+      Services Provided: Babysitting<%= f.check_box :babysitting, placeholder: "babysitting" %>
+      Grocery Shopping<%= f.check_box :grocery_shopping, placeholder: "grocery_shopping" %>
+      E-Learning Assistance<%= f.check_box :e_learning_assistance, placeholder: "e_learning_assistance" %><br><br>
+      I am Available on the Following Days:<br>
+      Sunday<%= f.check_box :sunday, placeholder: "sunday" %>
+      Monday<%= f.check_box :monday, placeholder: "monday" %>
+      Tuesday<%= f.check_box :tuesday, placeholder: "tuesday" %>
+      Wednesday<%= f.check_box :wednesday, placeholder: "wednesday" %>
+      Thursday<%= f.check_box :thursday, placeholder: "thursday" %>
+      Friday<%= f.check_box :friday, placeholder: "friday" %>
+      Saturday<%= f.check_box :saturday, placeholder: "saturday" %><br><br>
+      I am Available at the Following Times:<br>
+      Morning<%= f.check_box :morning, placeholder: "morning" %>
+      Afternoon<%= f.check_box :afternoon, placeholder: "afternoon" %>
+      Evening<%= f.check_box :evening, placeholder: "evening" %>
+      Night<%= f.check_box :night, placeholder: "night" %><br><br>
+      I Have Transportation<%= f.check_box :yes_transit, placeholder: "yes_transit" %>
+      I Don't Have Transportation<%= f.check_box :no_transit, placeholder: "no_transit" %><br><br>
+      <div class="search_div"><%= f.submit "Search" %></div><br>
+    <% end %>
+  </div>
 </div>
 
-<div class="rosie_div">
-  <img src="https://images.fastcompany.net/image/upload/w_640,f_auto,q_auto,fl_lossy/wp-cms/uploads/2018/06/p-2-90176641-what-the-iconic-rosie-the-riveter-poster-tktktk-1.jpg">
-</div>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<div id="search-results-append"></div>
 
-<br>
 
-<div class="disclaimer">
-DISCLAIMER: This site is for the purpose of helping working parents locate members of the community who are willing to assist. We do not run individual background checks on the individuals who have reached out, and rely on the goodwill of participants to make this exercise successful. We are asking participants who are over 18 to provide references, and we urge those seeking services to do your own due diligence before making any hiring decisions.
-
-Please remember that this program is designed to help students and families through this challenging time in which school has transitioned to an online learning system. Your family and education needs will still be in the forefront. Our priority remains the health and safety of everyone involved and in order to keep everyone as safe as possible we ask that if you or anyone has come in close contact with you does not feel well that you stay at home and contact us to provide accomodation for your family. This program is completely voluntary and if you feel uncomfortable at any time you may cease participation. In participating in this program you enter your partner's home and you are taking responsibility for your own health and safety. All of your information will be protected and will only be shared with the family in which you become paired with. Typing your name below serves as your electronic signature acknowledging all the statements above. *
-</div>
-</body>
+  

@@ -14,6 +14,79 @@
  *= require_self
  */
 
+.login_title_rosie{
+
+}
+
+.login_div {
+  float: left;
+  width: 30%;
+    border-color:black;
+  border-style:solid;
+  border-width: thin;
+
+}
+
+.title_rosie {
+  float: left;
+  text-align:center;
+    border-color:black;
+  border-style:solid;
+  border-width: thin;
+}
+
+.hero_volunteer_div {
+
+}
+
+.hero_div {
+  float:left;
+  width:49.5%;
+  border-color:black;
+  border-style:solid;
+  border-width: thin;
+  text-align:center;
+}
+
+.volunteer_div{
+  float:left;
+  width:49.5%;
+  border-color:black;
+  border-style:solid;
+  border-width: thin;
+  text-align:center;
+}
+
+/*.hero_div {
+  float: left;
+  width: 50%;
+  text-align:center;
+  padding-bottom: 500em;
+  margin-bottom: -500em;
+}
+
+.hero_div_box{
+  border-color:black;
+    border-style:solid;
+}
+
+ .volunteer_div {
+  float: left;
+  width: 50%;
+  text-align:center;
+  margin-right: -1px;
+  padding-bottom: 500em;
+  margin-bottom: -500em;
+}
+
+.volunteer_div_box{
+  border-color:black;
+    border-style:solid;
+}
+*/
+
+
+
  .search_our_db_div {
   text-align:center;
  }
@@ -23,15 +96,7 @@
   font-size-adjust:1;
  }
 
- .login_div {
-   position: fixed;
-   top: 0;
-   left: 0;
-   border-color:black;
-   border-style:solid;
-   margin-top: 30px;
-   margin-left: 30px;
- }
+
 
   .results {
     display: flex; /* equal height of the children */
@@ -53,10 +118,11 @@
     border-color:black;
   }  
   
-  .rosie_div {
+/*  .rosie_div {
+    float:right;
     margin:6px;
     text-align:center;
-  }
+  }*/
 
   .disclaimer {
    width:40%;
@@ -76,7 +142,7 @@
   .register_page {
     border-color:black;
     border-style:solid;
-  }  
+  }
 
   .container {
     overflow: hidden;
@@ -85,33 +151,6 @@
 
   .everyone_div{
   }
-
- .hero_div {
-  float: left;
-  width: 50%;
-  text-align:center;
-  padding-bottom: 500em;
-  margin-bottom: -500em;
-}
-
-.hero_div_box{
-  border-color:black;
-    border-style:solid;
-}
-
- .volunteer_div {
-  float: left;
-  width: 50%;
-  text-align:center;
-  margin-right: -1px; /* Thank you IE */
-  padding-bottom: 500em;
-  margin-bottom: -500em;
-}
-
-.volunteer_div_box{
-  border-color:black;
-    border-style:solid;
-}
 
 .index_search_top_bar {
   padding-top:20px;
