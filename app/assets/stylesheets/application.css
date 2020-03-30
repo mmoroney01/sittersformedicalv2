@@ -14,44 +14,77 @@
  *= require_self
  */
 
-.results {
-  text-align:center;
-
-  display: flex; /* equal height of the children */
-  flex-wrap: wrap;
-  list-style: none;
-  flex-basis: 0 0 33.333333%;
-}
-
- .one_result {
-  margin: 0 auto;
-  list-style: none;
-  flex-basis:0 0 33.333333%;
-  width:33%;
-  border-style:solid;
-  border-color:black;
-  text-align:center;
-
-}
-
-
- #search-results-append {
+ .search_our_db_div {
   text-align:center;
  }
 
- .register_page {
-  border-color:black;
-  border-style:solid;
+ .app_title {
+  text-align:center;
+  font-size-adjust:1;
  }
 
- .container {
-  overflow: hidden;
-  width: 100%;
+ .login_div {
+   position: fixed;
+   top: 0;
+   left: 0;
+   border-color:black;
+   border-style:solid;
+   margin-top: 30px;
+   margin-left: 30px;
+ }
+
+  .results {
+    display: flex; /* equal height of the children */
+    flex-wrap: wrap;
+    list-style: none;
+    flex-basis: 0 0 31.96%;
+  }  
+
+  .one_result {
+    background-color:lightblue;
+    padding-left: 20px;
+    padding-top:15px;
+    padding-bottom:15px;
+    margin: 0 auto;
+    list-style: none;
+    flex-basis:0 0 31.96%;
+    width:31.96%;
+    border-style:solid;
+    border-color:black;
+  }  
+  
+  .rosie_div {
+    margin:6px;
+    text-align:center;
+  }
+
+  .disclaimer {
+   width:40%;
+   position: fixed;
+   bottom: 0;
+   left: 0;
+   border-color:black;
+   border-style:solid;
+   margin-bottom: 2%;
+   margin-left: 2%;
 }
 
- .everyone_div{
-  text-align:center;
- }
+  #search-results-append {  
+  
+  }  
+
+  .register_page {
+    border-color:black;
+    border-style:solid;
+  }  
+
+  .container {
+    overflow: hidden;
+    width: 100%;
+  }  
+
+  .everyone_div{
+  }
 
  .hero_div {
   float: left;
@@ -60,6 +93,12 @@
   padding-bottom: 500em;
   margin-bottom: -500em;
 }
+
+.hero_div_box{
+  border-color:black;
+    border-style:solid;
+}
+
  .volunteer_div {
   float: left;
   width: 50%;
@@ -67,4 +106,16 @@
   margin-right: -1px; /* Thank you IE */
   padding-bottom: 500em;
   margin-bottom: -500em;
+}
+
+.volunteer_div_box{
+  border-color:black;
+    border-style:solid;
+}
+
+.index_search_top_bar {
+  padding-top:20px;
+  padding-left:20px;
+  border-color:black;
+  border-style:solid;  
 }

@@ -1,12 +1,18 @@
+
+<div class="index_search_top_bar">
   <% if user_signed_in? %>
-    <%= link_to destroy_user_session_path, method: :delete do %>Log out<% end %>
+    <%= button_to destroy_user_session_path, method: :delete do %>Log out<% end %>
   <% end %>
 
-  <h1 style="color:blue;">Search</h1>
+  <div class="search_our_db_div">
+    <h1>Search</h1>
+  </div>
 
-  <h3>Please select only ONE of the following: "I need a Volunteer!" OR "I am Willing to Volunteer"</h3>
+  <h1 style="text-align:center;">Please select only ONE of the following: "I need a Volunteer!" OR "I am Willing to Volunteer"</h3>
+</div>
 
   <div class="hero_div">
+    <div class="hero_div_box">
     <%= form_with model: User, url: '/users/volunteer_index', method: :get, remote: true do |f| %>
       <br>
       I need a Volunteer!<%= f.check_box :hero, placeholder: "hero" %><br><br>
@@ -35,8 +41,10 @@
       <div class="search_div"><%= f.submit "Search" %></div><br>
     <% end %>
   </div>
+  </div>
 
   <div class="volunteer_div">
+    <div class="volunteer_div_box">
     <%= form_with model: User, url: '/users/hero_index', method: :get, remote: true do |f| %>
       <br>
       I am Willing to Volunteer<%= f.check_box :volunteer, placeholder: "volunteer" %><br><br>
@@ -61,6 +69,7 @@
       I Don't Have Transportation<%= f.check_box :no_transit, placeholder: "no_transit" %><br><br>
       <div class="search_div"><%= f.submit "Search" %></div><br>
     <% end %>
+  </div>
   </div>
 <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>  
   <div id="search-results-append"></div>
